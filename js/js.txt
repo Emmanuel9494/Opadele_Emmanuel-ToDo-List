@@ -1,0 +1,2 @@
+This folder contains only js (Java Scripts) used for this project.
+this folder also contains a .gitkeep, which tells github to keep the files and potentially have them published to the Repo

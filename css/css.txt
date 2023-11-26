@@ -1,0 +1,2 @@
+This folder will contain only CSS (Cascading Style Sheet) files only.
+CSS files have an extention of .css
