@@ -9,8 +9,8 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
     color: white;
-    background-color: #000000;
-    background-image: url(../images/characters_art_mas_mob_01.jpeg);
+    background-color: #000000c9;
+    background-image: url(../images/color-study3.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     background-blend-mode: overlay;
@@ -21,13 +21,14 @@ body{
 }
 
 header{
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.884);
     color: #000000;
     position: sticky;
     top:0;
     display: flex;
     justify-content: center;
     margin-top: 35px;
+    justify-content: flex-start;
 }
 
 header nav{
@@ -67,7 +68,7 @@ header nav ul li {
 }
 
 header nav ul li:hover {
-    color: aqua;
+    color: rgb(0, 0, 0);
 }
 
 
@@ -80,6 +81,38 @@ header nav ul li:hover {
     padding: 25px 0 0 5px;
     
 }
+/*Drop Down Nav*/
+.dropdown > ul{
+    list-style-type: none;
+}
+
+.dropdown ul li {
+    padding: 6px 8px;
+   
+}
+
+.dropdown li {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+nav .dropdown {
+    display:flex;
+    position:absolute;
+    width: 700px;
+    height: 30px;
+    margin-left: -57px;
+    margin-top: 30px;
+    
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    
+    
+}
+
+nav li:hover .dropdown {
+    display: flex;
+}
+
 
 #date-time{
     position: fixed;
@@ -104,13 +137,13 @@ header nav ul li:hover {
     background-color: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
-    margin-top: -125px;
+    margin-top: -100px;
     margin-left: 1140px;
     content: "\023F1";
 }
 
 main{
-    margin-top: 100px;
+    margin-top: 40px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -244,7 +277,6 @@ span{
 #inprogress input[type="checkbox"]:checked +  span {
     color: rgb(255, 0, 0); 
     background-color: blue;
-    
     border-radius: 10%;
     animation: select  0.8s;
 }
@@ -252,7 +284,6 @@ span{
 #done input[type="checkbox"]:checked +  span {
     color: rgb(0, 255, 34); 
     background-color: blue;
-    
     border-radius: 10%;
     animation: select  0.8s;
 }
@@ -262,3 +293,19 @@ span{
     to {opacity: 1;}
 }
 
+/*Footer Styling*/
+footer {
+    color: rgb(255, 255, 255);
+    padding: 25px 0;
+    text-align: center;
+    background-color: #000000;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: overlay;
+
+}
+
+.sticky_footer{
+    position: sticky;
+    height: 50px;
+}
