@@ -81,6 +81,9 @@ header nav ul li:hover {
     
 }
 
+#date-time{
+    position: fixed;
+}
 
 #realtimeclock::after {
       content: "\023F1";
@@ -97,27 +100,28 @@ header nav ul li:hover {
 
 #realtimeclock{
     color: #000000;
+    width: 120px;
     background-color: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
     margin-top: -125px;
-    margin-left: 1100px;
+    margin-left: 1140px;
     content: "\023F1";
 }
 
 main{
-    margin-top: 200px;
+    margin-top: 100px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
 article {
-    width: 300px;
+    width: 320px;
     border: 4px solid white;
     border-radius: 8px;
     margin: 10px 12px;
-    text-align: left;
+    text-align:left;
 
 }
 
@@ -133,6 +137,7 @@ article:first-of-type {
 
 #inprogress {
     border: 4px solid red;
+   
 }
 
 #inprogress h2 {
@@ -153,8 +158,8 @@ article > ul{
 
 ul li {
     padding: 6px 8px;
-    text-transform: uppercase;
 }
+
 .do li:nth-child(odd) {
     background-color: rgba(255, 255, 255, 0.2);
 }
@@ -167,28 +172,36 @@ ul li {
     background-color: rgba(187, 255, 0, 0.2);
 }
 
-.task {
-    display: flex;
 
-}
+
 label{
-    margin-left: 20px;
+    margin-left: 5px;
+    margin-top: 5px;
+    display: flex;   
 }
 
-input{
-    margin-left: -70px;
+span{
+    margin-left: 10px;
+    margin-top: 5px;
 }
 
-input[type="checkbox"]::after {
+
+#todo li label::before {
+    display:flex;
+    content: "\1F3AF";  
+}
+
+
+#done input[type="checkbox"]::after {
     margin-right: 80px;
     display:flex;
-    margin-left: 260px;
+    margin-left: 280px;
     content: "\1F60A";  
 }
 
-input[type="checkbox"]:checked::after{
+#done input[type="checkbox"]:checked::after{
     content: "\2705";
-    margin-left: 260px;
+    margin-left: 280px;
     width: 15px;
     height: 15px;
     border-radius: 50%;
@@ -196,19 +209,56 @@ input[type="checkbox"]:checked::after{
 
 }
 
-qinput[type="checkbox"]:checked::before{
-    content: "\1F60A";
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background-color: green;
-    border: 4px solid greenyellow;
-    position: absolute;
-    animation: fadeIn 0.7s;
-
-}
 
 @keyframes fadeIn{
     from{opacity: 0;}
-    to {opacity: 1px;}
+    to {opacity: 1;}
 }
+
+
+#inprogress input[type="checkbox"]::after {
+    margin-right: 80px;
+    display:flex;
+    margin-left: 280px; 
+}
+
+#inprogress input[type="checkbox"]:checked::after{
+    content: "\231B";
+    margin-left: 280px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    animation: rotate  0.8s infinite;
+
+}
+
+@keyframes rotate{
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(306deg);
+    }
+}
+
+#inprogress input[type="checkbox"]:checked +  span {
+    color: rgb(255, 0, 0); 
+    background-color: blue;
+    
+    border-radius: 10%;
+    animation: select  0.8s;
+}
+
+#done input[type="checkbox"]:checked +  span {
+    color: rgb(0, 255, 34); 
+    background-color: blue;
+    
+    border-radius: 10%;
+    animation: select  0.8s;
+}
+
+@keyframes select{
+    from{opacity: 0;}
+    to {opacity: 1;}
+}
+
